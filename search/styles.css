@@ -4,6 +4,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0%;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
     background-color: #24252a; 
 }
 
@@ -59,6 +64,8 @@ button:hover {
 }
 
 .searchBox {
+    padding-left: 2em;
+    padding-right: 2em;
     display: flex;
     max-width: 43%;
     align-items: center;
@@ -101,7 +108,7 @@ button:active {
     border: none;
     background: none;
     outline: none;
-    color: white;
+    color: black;
     font-size: 15px;
     padding: 24px 46px 24px 26px;
 }
@@ -136,29 +143,4 @@ button:active {
     transform: translateY(-3px);
 }
 
-
-
-  
-/* canvas {
-    margin-top: -5em;
-    margin-bottom: -3em;
-    pointer-events: none;
-}
-
-.content {
-    text-align: center;
-}
-
-.container a{
-    background: white;
-    padding: 1em ;
-    text-decoration: none;
-    font-family: "Nunito";
-    color: black;
-    font-weight: bold;
-    border-radius: .3em;
-    width: 30%;
-    display: inline-block;
-    transition: background-color .3s;
-} */
 
