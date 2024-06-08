@@ -1,14 +1,10 @@
-// Import the functions you need from the SDKs you need
-// const { initializeApp } = require("firebase/app");
-// const { firebaseConfig } = require("./firebaseconfig");
-
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
+// const { app, db } = require("../firebaseconfig");
 
 firstName = document.getElementById("firstName");
 lastName = document.getElementById("lastName");
 email = document.getElementById("email");
 psw = document.getElementById("psw");
+cnf = document.getElementById("cnf");
 submit = document.getElementById("send");
 
 submit.onclick = (event) => {
@@ -16,7 +12,7 @@ submit.onclick = (event) => {
   formValidation();
 };
 function formValidation() {
-  if (passid_validation(psw, 8, 15)) {
+  if (passid_validation(psw, 8, 15) && checkpass(psw, cnf)) {
     console.log(firstName.value);
     console.log(lastName.value);
     console.log(email.value);
@@ -34,4 +30,10 @@ function passid_validation(psw, mx, my) {
   }
   return true;
 }
-function checkpass(psw1, psw2) {}
+function checkpass(psw1, psw2) {
+  if (psw1 === psw2) {
+    return true;
+  } else {
+    alert("passwords do not match");
+  }
+}
